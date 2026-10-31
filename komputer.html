@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorium Komputer - UBM Gorontalo</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="brand">
+                <img src="Image/Logo.png" alt="Logo UBM" class="logo">
+                <div class="brand-text">
+                    <strong>Universitas Bina Mandiri</strong>
+                    <span>Gorontalo</span>
+                </div>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                
+                <li class="dropdown">
+                    <a href="Struktur.html">Profil <i class="fa-solid fa-chevron-down" style="font-size: 10px; margin-left: 3px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="Struktur.html"><i class="fa-solid fa-users"></i> Struktur Organisasi</a>
+                        <a href="dokumen.html"><i class="fa-solid fa-file-pdf"></i> Dokumen & SK Resmi</a>
+                    </div>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="active">Layanan Lab <i class="fa-solid fa-chevron-down" style="font-size: 10px; margin-left: 3px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="podcast.html"><i class="fa-solid fa-microphone-lines"></i> Ruang Podcast</a>
+                        <a href="microteaching.html"><i class="fa-solid fa-chalkboard-user"></i> Microteaching</a>
+                        <a href="komputer.html"><i class="fa-solid fa-computer"></i> Ruang Komputer</a>
+                    </div>
+                </li>
+
+                <li><a href="peminjaman.html">Peminjaman & Jadwal</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="survey.html" target="_blank" style="color: var(--logo-red); font-weight: 600;"><i class="fa-solid fa-star"></i> Survei</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Laboratorium Komputer</h1>
+            <p>Pusat Praktikum Teknologi Informasi & Daftar Program Studi Pengguna</p>
+        </div>
+    </header>
+
+    <main class="container page-content">
+        <a href="index.html" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda</a>
+
+        <div class="content-box" style="margin-bottom: 40px;">
+            <h2><i class="fa-solid fa-circle-info" style="color: var(--logo-cyan); margin-right: 10px;"></i> Informasi Layanan</h2>
+            <p>Laboratorium Komputer Universitas Bina Mandiri Gorontalo dirancang untuk mendukung kegiatan praktikum perangkat lunak, riset digital, dan pengembangan keterampilan teknologi bagi mahasiswa dari berbagai fakultas lintas disiplin ilmu.</p>
+        </div>
+
+        <h2 style="color: var(--logo-dark); margin-bottom: 25px; font-size: 1.5rem; text-align: center;">Daftar Program Studi Pengguna Lab Komputer</h2>
+        
+        <div class="sop-grid">
+            
+            <div class="sop-card">
+                <h3><i class="fa-solid fa-flask-vial"></i> FSTIK</h3>
+                <p style="font-size: 0.85rem; color: var(--text-gray); margin-bottom: 12px; font-weight: 500;">Fakultas Sains, Teknologi Dan Ilmu Kesehatan</p>
+                <ul class="sop-list">
+                    <li>S1 Administrasi Rumah Sakit</li>
+                </ul>
+            </div>
+
+            <div class="sop-card">
+                <h3><i class="fa-solid fa-landmark"></i> FPSP</h3>
+                <p style="font-size: 0.85rem; color: var(--text-gray); margin-bottom: 12px; font-weight: 500;">Fakultas Ilmu Pemerintahan Dan Sektor Publik</p>
+                <ul class="sop-list">
+                    <li>S1 Hubungan Internasional</li>
+                    <li>Sarjana Terapan Akuntansi Sektor Publik</li>
+                    <li>Sarjana Terapan Administrasi Pemerintahan Daerah</li>
+                </ul>
+            </div>
+
+            <div class="sop-card">
+                <h3><i class="fa-solid fa-graduation-cap"></i> FIPB</h3>
+                <p style="font-size: 0.85rem; color: var(--text-gray); margin-bottom: 12px; font-weight: 500;">Fakultas Ilmu Pendidikan Dan Budaya</p>
+                <ul class="sop-list">
+                    <li>S1 Teknologi Pendidikan</li>
+                    <li>S1 Perpustakaan Dan Sains Informasi</li>
+                </ul>
+            </div>
+
+            <div class="sop-card">
+                <h3><i class="fa-solid fa-chart-line"></i> FEB</h3>
+                <p style="font-size: 0.85rem; color: var(--text-gray); margin-bottom: 12px; font-weight: 500;">Fakultas Ekonomi Dan Bisnis</p>
+                <ul class="sop-list">
+                    <li>S1 Manajemen</li>
+                    <li>S1 Bisnis Digital</li>
+                    <li>S1 Administrasi Bisnis</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+
+    <footer id="kontak" class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <img src="Image/Logo.png" alt="Logo UBM" class="footer-logo">
+                <p>Mencetak generasi unggul, mandiri, dan berbudaya melalui fasilitas pendidikan dan praktik di lingkungan UBM Gorontalo.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Tautan Cepat</h3>
+                <ul>
+                    <li><a href="peminjaman.html"><i class="fa-solid fa-angle-right"></i> Peminjaman & Jadwal Lab</a></li>
+                    <li><a href="dokumen.html"><i class="fa-solid fa-angle-right"></i> Arsip Dokumen & SK PDF</a></li>
+                    <li><a href="https://forms.gle/1N2uTxFwTfMByCpcA" target="_blank"><i class="fa-solid fa-angle-right"></i> Survei Kepuasan (G-Form)</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Hubungi Kami</h3>
+                <ul style="color: #cbd5e1;">
+                    <li><i class="fa-solid fa-location-dot" style="color: var(--logo-cyan); margin-right: 10px;"></i> Jl. Prof. Dr. Aloe Saboe, Gorontalo</li>
+                    <li><i class="fa-solid fa-envelope" style="color: var(--logo-cyan); margin-right: 10px;"></i> info@ubm.ac.id</li>
+                </ul>
+                <div class="social-links">
+                    <a href="https://ubmg.ac.id/" target="_blank" class="social-icon" title="Website"><i class="fa-solid fa-globe"></i></a>
+                    <a href="https://www.instagram.com/fipbubmg?igsi=MThvbWZsemxwbGkwNg==" target="_blank" class="social-icon" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/194BFmGP5p/" target="_blank" class="social-icon" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="http://www.youtube.com/@univ.binamandirigorontalo" target="_blank" class="social-icon" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Universitas Bina Mandiri Gorontalo. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

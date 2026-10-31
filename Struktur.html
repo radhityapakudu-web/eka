@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruang Podcast & Struktur - UBM Gorontalo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS KHUSUS BAGAN STRUKTUR ORGANISASI PODCAST */
+        .org-tree {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+        
+        .org-card-primary, .org-card-secondary {
+            padding: 20px 40px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            min-width: 320px;
+            border: 2px solid transparent;
+        }
+        
+        .org-card-primary {
+            background: var(--logo-dark);
+            color: var(--white);
+            border-bottom: 4px solid var(--logo-gold);
+        }
+        
+        .org-card-secondary {
+            background: var(--logo-cyan);
+            color: var(--logo-dark);
+            border-bottom: 4px solid var(--logo-dark);
+        }
+        
+        .org-card-primary h4, .org-card-secondary h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            opacity: 0.9;
+        }
+        
+        .org-card-primary p, .org-card-secondary p {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        .arrow-down {
+            color: var(--logo-cyan);
+            font-size: 1.5rem;
+        }
+        
+        /* Grid 5 Kolom untuk Tim Bawah */
+        .org-level-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            width: 100%;
+            margin-top: 15px;
+        }
+        
+        .org-card-team {
+            background: var(--white);
+            border-top: 4px solid var(--logo-cyan);
+            padding: 25px 20px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+        }
+        
+        .org-card-team:hover {
+            transform: translateY(-5px);
+            border-color: var(--logo-red);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+        
+        .org-card-team h4 {
+            color: var(--white);
+            background: var(--logo-cyan);
+            font-size: 0.9rem;
+            margin: -25px -20px 20px -20px;
+            text-align: center;
+            padding: 12px 10px;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .org-card-team ul {
+            list-style: none;
+        }
+        
+        .org-card-team ul li {
+            font-size: 0.85rem;
+            color: var(--logo-dark);
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 18px;
+            line-height: 1.4;
+        }
+        
+        .org-card-team ul li::before {
+            content: '\f0da';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--logo-gold);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="brand">
+                <img src="Image/Logo.png" alt="Logo UBM" class="logo">
+                <div class="brand-text">
+                    <strong>Universitas Bina Mandiri</strong>
+                    <span>Gorontalo</span>
+                </div>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                
+                <li class="dropdown">
+                    <a href="#" class="active">Profil <i class="fa-solid fa-chevron-down" style="font-size: 10px; margin-left: 3px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="Struktur.html"><i class="fa-solid fa-users"></i> Struktur Organisasi</a>
+                        <a href="dokumen.html"><i class="fa-solid fa-file-pdf"></i> Dokumen & SK Resmi</a>
+                    </div>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#layanan">Layanan Lab <i class="fa-solid fa-chevron-down" style="font-size: 10px; margin-left: 3px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="podcast.html"><i class="fa-solid fa-microphone-lines"></i> Ruang Podcast</a>
+                        <a href="microteaching.html"><i class="fa-solid fa-chalkboard-user"></i> Microteaching</a>
+                        <a href="komputer.html"><i class="fa-solid fa-computer"></i> Ruang Komputer</a>
+                    </div>
+                </li>
+
+                <li><a href="peminjaman.html">Peminjaman & Jadwal</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="survey.html" target="_blank" style="color: var(--logo-red); font-weight: 600;"><i class="fa-solid fa-star"></i> Survei</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HEADER HALAMAN -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Laboratorium Podcast & Tim Pengelola</h1>
+            <p>Fasilitas penyiaran digital, produksi audio visual, serta struktur kepengurusan resmi</p>
+        </div>
+    </header>
+
+    <main class="container page-content">
+        <!-- TOMBOL KEMBALI -->
+        <a href="index.html" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda</a>
+
+        <!-- BAGIAN 1: STRUKTUR ORGANISASI TIM PODCAST (SESUAI GAMBAR SK) -->
+        <div class="schedule-box" style="margin-bottom: 40px; padding: 40px 30px;">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h2 style="color: var(--logo-dark); font-size: 1.8rem; margin-bottom: 10px;">Struktur Tim Podcast</h2>
+                <div class="divider" style="margin: 0 auto;"></div>
+                <p style="color: var(--text-gray); margin-top: 15px;">Sesuai dengan SK No: 109/UBMG/SK/III/2026 (07 Maret 2026)</p>
+            </div>
+
+            <!-- BAGAN HIERARKI -->
+            <div class="org-tree">
+                
+                <!-- Level 1: Penanggung Jawab -->
+                <div class="org-card-primary">
+                    <h4>Penanggung Jawab</h4>
+                    <p>Dr. Hj. Titin Dungio, M.Si., M.Kes</p>
+                </div>
+                
+                <i class="fa-solid fa-arrow-down arrow-down"></i>
+
+                <!-- Level 2: Produser -->
+                <div class="org-card-secondary">
+                    <h4>Produser</h4>
+                    <p>Moh. Falmes Lakadjo</p>
+                </div>
+
+                <i class="fa-solid fa-arrow-down arrow-down"></i>
+
+                <!-- Level 3: 5 Divisi Tim -->
+                <div class="org-level-3">
+                    
+                    <!-- Divisi 1 -->
+                    <div class="org-card-team">
+                        <h4>Host / Co-Host</h4>
+                        <ul>
+                            <li>Sintya Agy Nuraisyah</li>
+                            <li>Nur. Alif Asiking</li>
+                            <li>Sri Intan Mellan Igirisa</li>
+                            <li>Marshela Siradjang</li>
+                        </ul>
+                    </div>
+
+                    <!-- Divisi 2 -->
+                    <div class="org-card-team">
+                        <h4>Script Writer</h4>
+                        <ul>
+                            <li>Moh. Rifki Hamid</li>
+                            <li>Sri Sulfira</li>
+                            <li>Amelia Muda</li>
+                        </ul>
+                    </div>
+
+                    <!-- Divisi 3 -->
+                    <div class="org-card-team">
+                        <h4>Editor</h4>
+                        <ul>
+                            <li>Pratiwi Matodjo</li>
+                            <li>Revalina Maku</li>
+                            <li>Ririn Masaguni</li>
+                            <li>Siti Rahmatika</li>
+                        </ul>
+                    </div>
+
+                    <!-- Divisi 4 -->
+                    <div class="org-card-team">
+                        <h4>Social Media</h4>
+                        <ul>
+                            <li>Rr. Ananda Mahadewi</li>
+                            <li>Anisa Bilondatu</li>
+                            <li>Aditya Moh. A Habi</li>
+                        </ul>
+                    </div>
+
+                    <!-- Divisi 5 -->
+                    <div class="org-card-team">
+                        <h4>Kameramen/Audio Engineer</h4>
+                        <ul>
+                            <li>Ikbal Halid</li>
+                            <li>Hajrah A. Bobihu</li>
+                            <li>Mohamad Syaril Lasena</li>
+                            <li>Putri Yulandari I. Mangambali</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- BAGIAN 2: INFORMASI KOORDINATOR & PENANGGUNG JAWAB LABORATORIUM LAINNYA -->
+        <div class="schedule-box" style="margin-bottom: 40px; padding: 40px 30px;">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h2 style="color: var(--logo-dark); font-size: 1.8rem; margin-bottom: 10px;">Penanggung Jawab & Koordinator Lab</h2>
+                <div class="divider" style="margin: 0 auto;"></div>
+                <p style="color: var(--text-gray); margin-top: 15px;">Informasi pengelola fasilitas laboratorium lainnya di lingkungan UBM Gorontalo</p>
+            </div>
+
+            <div class="org-grid">
+                <!-- Lab Komputer -->
+                <div class="org-card">
+                    <div class="org-avatar"><i class="fa-solid fa-computer"></i></div>
+                    <h4>Sitti Husna N. Djou, SE., M.Si</h4>
+                    <span>Koordinator Lab Komputer</span>
+                </div>
+
+                <!-- Lab Multimedia -->
+                <div class="org-card">
+                    <div class="org-avatar"><i class="fa-solid fa-photo-film"></i></div>
+                    <h4>Iwan Jassin, S.Pd., M.Pd</h4>
+                    <span>Koordinator Lab Multimedia</span>
+                </div>
+
+                <!-- Microteaching -->
+                <div class="org-card">
+                    <div class="org-avatar"><i class="fa-solid fa-chalkboard-user"></i></div>
+                    <h4>Muh. Rijal, S.Pd., M.Pd</h4>
+                    <span>Penanggung Jawab Microteaching</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- BAGIAN 3: SOP PODCAST -->
+        <h3 style="color: var(--logo-dark); margin-bottom: 25px; text-align: center;">Standar Operasional Prosedur (SOP) Podcast</h3>
+        <div class="sop-grid">
+            <div class="sop-card">
+                <h3><i class="fa-solid fa-headphones"></i> Persiapan Alat</h3>
+                <ul class="sop-list">
+                    <li>Hadir 15 menit sebelum jadwal.</li>
+                    <li>Pastikan semua kabel microphone dan headphone terhubung ke mixer.</li>
+                    <li>Nyalakan komputer dan pastikan software perekam siap digunakan.</li>
+                </ul>
+            </div>
+
+            <div class="sop-card warning">
+                <h3><i class="fa-solid fa-circle-exclamation"></i> Larangan</h3>
+                <ul class="sop-list">
+                    <li>Dilarang membawa makanan berkuah dan minuman yang tidak menggunakan botol tertutup.</li>
+                    <li>Dilarang mengubah pengaturan (setting) pada mixer audio tanpa izin laboran.</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer id="kontak" class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <img src="Image/Logo.png" alt="Logo UBM" class="footer-logo">
+                <p>Mencetak generasi unggul, mandiri, dan berbudaya melalui fasilitas pendidikan dan praktik di lingkungan UBM Gorontalo.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Tautan Cepat</h3>
+                <ul>
+                    <li><a href="peminjaman.html"><i class="fa-solid fa-angle-right"></i> Peminjaman & Jadwal Lab</a></li>
+                    <li><a href="dokumen.html"><i class="fa-solid fa-angle-right"></i> Arsip Dokumen & SK PDF</a></li>
+                    <li><a href="https://forms.gle/1N2uTxFwTfMByCpcA" target="_blank"><i class="fa-solid fa-angle-right"></i> Survei Kepuasan (G-Form)</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Hubungi Kami</h3>
+                <ul style="color: #cbd5e1;">
+                    <li><i class="fa-solid fa-location-dot" style="color: var(--logo-cyan); margin-right: 10px;"></i> Jl. Prof. Dr. Aloe Saboe, Gorontalo</li>
+                    <li><i class="fa-solid fa-envelope" style="color: var(--logo-cyan); margin-right: 10px;"></i> info@ubm.ac.id</li>
+                </ul>
+                <div class="social-links">
+                    <a href="https://ubmg.ac.id/" target="_blank" class="social-icon" title="Website"><i class="fa-solid fa-globe"></i></a>
+                    <a href="https://www.instagram.com/fipbubmg?igsi=MThvbWZsemxwbGkwNg==" target="_blank" class="social-icon" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/194BFmGP5p/" target="_blank" class="social-icon" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="http://www.youtube.com/@univ.binamandirigorontalo" target="_blank" class="social-icon" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Universitas Bina Mandiri Gorontalo. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peminjaman & Jadwal Lab - UBM Gorontalo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS Khusus agar Iframe Google Form tampil lapang dan proporsional */
+        .gform-container {
+            width: 100%;
+            min-height: 850px;
+            border: none;
+            border-radius: 8px;
+            background: #ffffff;
+            margin-top: 10px;
+        }
+        
+        /* Pembungkus utama agar form fokus di tengah dengan lebar yang pas */
+        .page-wrapper-center {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="brand">
+                <img src="Image/Logo.png" alt="Logo UBM" class="logo">
+                <div class="brand-text">
+                    <strong>Universitas Bina Mandiri</strong>
+                    <span>Gorontalo</span>
+                </div>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                
+                <li class="dropdown">
+                    <a href="Struktur.html">Profil <i class="fa-solid fa-chevron-down" style="font-size: 10px; margin-left: 3px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="Struktur.html"><i class="fa-solid fa-users"></i> Struktur Organisasi</a>
+                        <a href="dokumen.html"><i class="fa-solid fa-file-pdf"></i> Dokumen & SK Resmi</a>
+                    </div>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">Layanan Lab <i class="fa-solid fa-chevron-down" style="font-size: 10px; margin-left: 3px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="podcast.html"><i class="fa-solid fa-microphone-lines"></i> Ruang Podcast</a>
+                        <a href="microteaching.html"><i class="fa-solid fa-chalkboard-user"></i> Microteaching</a>
+                        <a href="komputer.html"><i class="fa-solid fa-computer"></i> Ruang Komputer</a>
+                    </div>
+                </li>
+
+                <li><a href="peminjaman.html" class="active">Peminjaman & Jadwal</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="survey.html" target="_blank" style="color: var(--logo-red); font-weight: 600;"><i class="fa-solid fa-star"></i> Survei</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HEADER HALAMAN -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Peminjaman & Jadwal Laboratorium</h1>
+            <p>Sistem Informasi dan Reservasi Fasilitas Laboratorium Universitas Bina Mandiri</p>
+        </div>
+    </header>
+
+    <main class="container page-content">
+        <!-- TOMBOL KEMBALI -->
+        <a href="index.html" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda</a>
+
+        <!-- KONTEN UTAMA (TERSUSUN KE BAWAH DENGAN LEBAR TERKONTROL) -->
+        <div class="page-wrapper-center">
+            
+            <!-- ============================== -->
+            <!-- BAGIAN 1: FORM GOOGLE FORM     -->
+            <!-- ============================== -->
+            <div class="schedule-box">
+                <h3 style="color: var(--logo-dark); margin-bottom: 10px;">
+                    <i class="fa-solid fa-pen-to-square" style="color: var(--logo-cyan); margin-right: 8px;"></i> 
+                    Form Pengajuan Peminjaman Lab
+                </h3>
+                <p style="font-size: 0.9rem; color: var(--text-gray); margin-bottom: 15px;">
+                    Silakan isi formulir di bawah ini dengan lengkap. Data Anda akan masuk secara otomatis ke sistem pengelola laboratorium.
+                </p>
+                
+                <!-- ADMIN: Ganti src="..." di bawah dengan Link Embed (<iframe...>) dari Google Form Anda -->
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSepFb3bkhs4FxK-X68UHB82v3CHWEk7bZfy-hUcm4Mo7TDizQ/viewform?embedded=true" width="640" height="1283" frameborder="0" marginheight="0" marginwidth="0">Memuat…</iframe>
+                
+                <div style="margin-top: 20px; padding: 15px; background: #eff6ff; border-left: 4px solid var(--logo-cyan); border-radius: 6px; font-size: 0.85rem; color: #1e40af;">
+                    <i class="fa-solid fa-circle-info" style="margin-right: 5px;"></i> <strong>Info Admin:</strong> Pastikan tautan <em>Embed (HTML)</em> Google Form sudah terpasang dengan benar pada atribut <code>src</code> di atas.
+                </div>
+            </div>
+
+            <!-- ============================== -->
+            <!-- BAGIAN 2: TABEL JADWAL DI BAWAH  -->
+            <!-- ============================== -->
+            <div class="schedule-box">
+                <h3 style="color: var(--logo-dark); margin-bottom: 10px;">
+                    <i class="fa-solid fa-calendar-days" style="color: var(--logo-gold); margin-right: 8px;"></i> 
+                    Jadwal Penggunaan Lab Terkini
+                </h3>
+                <p style="font-size: 0.85rem; color: var(--text-gray); margin-bottom: 20px;">
+                    Daftar jadwal laboratorium yang telah disetujui. Geser tabel ke samping jika diakses via perangkat mobile.
+                </p>
+                
+                <!-- Pembungkus tabel agar responsif -->
+                <div class="table-responsive-wrapper">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th style="min-width: 140px;">Waktu</th>
+                                <th style="min-width: 150px;">Ruang Lab</th>
+                                <th style="min-width: 200px;">Peminjam</th>
+                                <th style="min-width: 110px;">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- ADMIN: Edit Jadwal di Bawah Ini -->
+                            
+                            <!-- Jadwal 1 -->
+                            <tr>
+                                <td>
+                                    <strong>Kamis, 20 Agt</strong><br>
+                                    <span style="font-size: 0.8rem; color: #94a3b8;"><i class="fa-regular fa-clock"></i> 09:00 - 11:00</span>
+                                </td>
+                                <td>
+                                    <span style="font-weight: 500; color: var(--logo-dark);">Lab Podcast</span>
+                                </td>
+                                <td>
+                                    -<br>
+                                    <span style="font-size: 0.8rem; color: #94a3b8;">-</span>
+                                </td>
+                                <td><span class="badge-status" style="background:#dcfce7; color:#15803d;">Disetujui</span></td>
+                            </tr>
+
+                            <!-- Jadwal 2 -->
+                            <tr>
+                                <td>
+                                    <strong>Jumat, 21 Agt</strong><br>
+                                    <span style="font-size: 0.8rem; color: #94a3b8;"><i class="fa-regular fa-clock"></i> 13:30 - 15:30</span>
+                                </td>
+                                <td>
+                                    <span style="font-weight: 500; color: var(--logo-dark);">Microteaching</span>
+                                </td>
+                                <td>
+                                    -<br>
+                                    <span style="font-size: 0.8rem; color: #94a3b8;">-</span>
+                                </td>
+                                <td><span class="badge-status" style="background:#fef3c7; color:#b45309;">Menunggu</span></td>
+                            </tr>
+
+                            <!-- Jadwal 3 -->
+                            <tr>
+                                <td>
+                                    <strong>Senin, 24 Agt</strong><br>
+                                    <span style="font-size: 0.8rem; color: #94a3b8;"><i class="fa-regular fa-clock"></i> 08:00 - 10:00</span>
+                                </td>
+                                <td>
+                                    <span style="font-weight: 500; color: var(--logo-dark);">Lab Komputer</span>
+                                </td>
+                                <td>
+                                    -<br>
+                                    <span style="font-size: 0.8rem; color: #94a3b8;">-</span>
+                                </td>
+                                <td><span class="badge-status" style="background:#f1f5f9; color:#64748b;">Selesai</span></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="kontak" class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <img src="Image/Logo.png" alt="Logo UBM" class="footer-logo">
+                <p>Mencetak generasi unggul, mandiri, dan berbudaya melalui fasilitas pendidikan dan praktik di lingkungan UBM Gorontalo.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Tautan Cepat</h3>
+                <ul>
+                    <li><a href="peminjaman.html"><i class="fa-solid fa-angle-right"></i> Peminjaman & Jadwal Lab</a></li>
+                    <li><a href="dokumen.html"><i class="fa-solid fa-angle-right"></i> Arsip Dokumen & SK PDF</a></li>
+                    <li><a href="https://forms.gle/1N2uTxFwTfMByCpcA" target="_blank"><i class="fa-solid fa-angle-right"></i> Survei Kepuasan (G-Form)</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Hubungi Kami</h3>
+                <ul style="color: #cbd5e1;">
+                    <li><i class="fa-solid fa-location-dot" style="color: var(--logo-cyan); margin-right: 10px;"></i> Jl. Prof. Dr. Aloe Saboe, Gorontalo</li>
+                    <li><i class="fa-solid fa-envelope" style="color: var(--logo-cyan); margin-right: 10px;"></i> info@ubm.ac.id</li>
+                </ul>
+                <div class="social-links">
+                    <a href="https://ubmg.ac.id/" target="_blank" class="social-icon" title="Website"><i class="fa-solid fa-globe"></i></a>
+                    <a href="https://www.instagram.com/fipbubmg?igsi=MThvbWZsemxwbGkwNg==" target="_blank" class="social-icon" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/194BFmGP5p/" target="_blank" class="social-icon" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="http://www.youtube.com/@univ.binamandirigorontalo" target="_blank" class="social-icon" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Universitas Bina Mandiri Gorontalo. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
